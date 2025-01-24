@@ -47,6 +47,7 @@ const Navbar = () => {
           </p>
         </Link>
 
+          <div className="flex gap-12">
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
@@ -60,6 +61,19 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <div>
+          <Link 
+            className="btn line-btn-dark btn-icon btn-radius text-secondary hover:text-white text-[18px] font-medium cursor-pointer" 
+            to={'/resume.pdf'} 
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <i className="fa fa-download"></i> Download Resume
+          </Link>
+        </div>
+        </div>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
